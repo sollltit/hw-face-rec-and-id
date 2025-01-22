@@ -1,6 +1,9 @@
 *.zip
+*.png
 archive.zip
 /archive2
-/rec_data/test/images
-/rec_data/train/images
-/rec_data/valid/images
+/det_data/test/images
+/det_data/train/images
+/det_data/valid/images
+/data
+/data2
