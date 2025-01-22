@@ -1,6 +1,6 @@
-train: ../det_data/train/images
-val: ../det_data/valid/images
-test: ../det_data/test/images
+train: C:/Users/user2/Downloads/hw/rec_data/train/images
+val:  C:/Users/user2/Downloads/hw/rec_data/valid/images
+test: C:/Users/user2/Downloads/hw/rec_data/test/images
 
 nc: 1
 names: ['face']
