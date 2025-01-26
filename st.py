@@ -11,6 +11,7 @@ import ast
 model_8s = YOLO(r'runs\detect\v_3_s\weights\best.pt')
 # загрузка дф с эмбеддингами
 traindf = pd.read_csv('emb_db.csv', sep = ',')
+# преобразование колонки с эмбеддингами чтобы их можно было сравнивать
 traindf['embedding'] = traindf['embedding'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
 
 def identity_face(img, model, df):
@@ -25,7 +26,7 @@ def identity_face(img, model, df):
             crop_ph = photo[y1:y2, x1:x2]
             try:
                 embedding_input = DeepFace.represent(img_path = crop_ph, model_name='VGG-Face')[0]['embedding']
-                max_prob = 0
+                max_prob = 0.4 # переменная для записи наилучшего совпадения, минимальное совпадение 40%
                 best_res = None
                 for i, embedding_db in enumerate(df['embedding']):
                     similarity = cosine_similarity([embedding_input], [embedding_db])[0][0]
