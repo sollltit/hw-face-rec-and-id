@@ -15,6 +15,9 @@ Report_M2.ipynb, Report_M2.html - работа за модуль Б
 st.py - скрипт графического приложения
 Файлы st_correct_work.mp4, st_no_face_work.mp4, st_not_id.mp4 - примеры работы графического приложения
 Documentation.docx, Documentation.pdf - документация к графическому приложению
+
+functionals.py - файл с функциями для unit-тестов
+unit_tests.py - файл с unit-тестами
 __________________________________________________________________________________________________________
 
 Report_M3.ipynb, Report_M3.html - работа за модуль В
